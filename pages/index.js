@@ -27,7 +27,7 @@ const HomePage = (props) => {
     <div>
       <Navbar
         light
-        className="clearfix text-muted"
+        className="clearfix text-muted navbar navbar-expand-lg  navbar-transparent"
         style={{ background: "#ea8238" }}
         expand="md"
       >
@@ -48,8 +48,22 @@ const HomePage = (props) => {
                 Cadastrar
               </DropdownToggle>
               <DropdownMenu right>
-                <DropdownItem>Cliente</DropdownItem>
-                <DropdownItem>Serviços</DropdownItem>
+                <DropdownItem>Sinistro</DropdownItem>
+                <DropdownItem>Usuário</DropdownItem>
+                <DropdownItem>Plano</DropdownItem>
+
+                <DropdownItem divider />
+                <DropdownItem>Sair</DropdownItem>
+              </DropdownMenu>
+            </UncontrolledDropdown>
+
+            <UncontrolledDropdown nav inNavbar>
+              <DropdownToggle nav caret>
+                Consultar
+              </DropdownToggle>
+              <DropdownMenu right>
+                <DropdownItem>Status</DropdownItem>
+
                 <DropdownItem divider />
                 <DropdownItem>Sair</DropdownItem>
               </DropdownMenu>

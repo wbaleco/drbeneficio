@@ -16,24 +16,59 @@ import {
   NavbarText,
   Jumbotron,
   Button,
+  Form,
+  FormGroup,
+  Label,
+  Input,
+  FormText,
 } from "reactstrap";
 
 const LoginPage = (props) => {
   return (
     <div>
-      <div>
-        <Jumbotron className="my-5 text-center">
-          <h1 className="display-3">Informe seu usuário e senha!</h1>
-
-          <hr className="my-2" />
-
-          <p className="lead">
-            <Button href="/login" color="primary">
-              Acessar
-            </Button>
-          </p>
-        </Jumbotron>
+      <div className="d-flex align-items-center flex-column p-2 text-center">
+        <h2 className="text-muted lead">Login</h2>
+        <form>
+          <div>
+            <FormGroup>
+              <Label for="email">Email</Label>
+              <Input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Qual seu melhor email?"
+                className="w-100 h-75 p-3"
+              />
+            </FormGroup>
+          </div>
+          <div></div>
+        </form>
       </div>
+      <footer className="footer">
+        <div className="container-fluid">
+          <nav>
+            {/*    <ul className="footer-menu">
+              <li>
+                <a href="#">Home</a>
+              </li>
+              <li>
+                <a href="#">Company</a>
+              </li>
+              <li>
+                <a href="#">Portfolio</a>
+              </li>
+              <li>
+                <a href="#">Blog</a>
+              </li>
+            </ul> */}
+            <p className="copyright text-center">
+              ©<script>document.write(new Date().getFullYear())</script>
+              <a href="http://www.creative-tim.com">Walter Baleco</a>,
+              Desenvolvido para Dr. Beneficio
+            </p>
+          </nav>
+        </div>
+      </footer>
     </div>
   );
 };
